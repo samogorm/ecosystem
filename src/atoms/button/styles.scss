@@ -10,25 +10,45 @@
   &--primary {
     background: getColor(yellow, base);
     color: getColor(darkBlue, base);
+
+    &:hover {
+      background: getColor(yellow, dark);
+    }
   }
 
   &--secondary {
     background: getColor(green, base);
     color: getColor(white, base);
+
+    &:hover {
+      background: getColor(green, dark);
+    }
   }
 
   &--danger {
     background: getColor(red, base);;
     color: getColor(white, base);
+
+    &:hover {
+      background: getColor(red, dark);
+    }
   }
 
   &--dark {
     background: getColor(darkBlue, base);
-    color: getColor(white, base);;
+    color: getColor(white, base);
+
+    &:hover {
+      background: getColor(darkBlue, dark);
+    }
   }
 
   &--light {
     background: getColor(lightGrey, base);
     color: getColor(darkBlue, base);
+
+    &:hover {
+      background: getColor(lightGrey, dark);
+    }
   }
 }
