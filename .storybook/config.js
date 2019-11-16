@@ -1,4 +1,11 @@
-import { configure } from '@storybook/react';
+import { configure, addParameters } from '@storybook/react';
+import ecosystemTheme from './ecosystemTheme';
 
-// automatically import all files ending in *.stories.js
-configure(require.context('../stories', true, /\.stories\.js$/), module);
+const req = configure(require.context('../src', true, /\.stories\.jsx$/), module);
+req.keys().forEach(req);
+
+addParameters({
+  options: {
+    theme: ecosystemTheme,
+  },
+});
