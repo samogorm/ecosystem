@@ -9,4 +9,10 @@ const Button = ({ label, type, action }) => (
   </button>
 );
 
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  action: PropTypes.func
+}
+
 export default Button;
