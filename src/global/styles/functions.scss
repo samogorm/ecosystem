@@ -1,0 +1,3 @@
+@function getColor($color, $variant: base) {
+  @return map-get(map-get($colors, $color), $variant);
+}

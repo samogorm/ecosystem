@@ -1,3 +1,6 @@
+@import './../../global/styles/settings.scss';
+@import './../../global/styles/functions.scss';
+
 .button {
   border: none;
   border-radius: 0.4em;
@@ -5,27 +8,27 @@
   padding: 0.8em 2em;
 
   &--primary {
-    background: #FFBA49;
-    color: #212D40;
+    background: getColor(yellow, base);
+    color: getColor(darkBlue, base);
   }
 
   &--secondary {
-    background: #118681;
-    color: #FFFFFF;
+    background: getColor(green, base);
+    color: getColor(white, base);
   }
 
   &--danger {
-    background: #E5163F;
-    color: #FFFFFF;
+    background: getColor(red, base);;
+    color: getColor(white, base);
   }
 
   &--dark {
-    background: #212D40;
-    color: #FFFFFF;
+    background: getColor(darkBlue, base);
+    color: getColor(white, base);;
   }
 
   &--light {
-    background: #EDE9E8;
-    color: #212D40;
+    background: getColor(lightGrey, base);
+    color: getColor(darkBlue, base);
   }
 }
