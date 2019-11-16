@@ -1,3 +1,31 @@
 .button {
   border: none;
+  border-radius: 0.4em;
+  font-size: 1em;
+  padding: 0.8em 2em;
+
+  &--primary {
+    background: #FFBA49;
+    color: #212D40;
+  }
+
+  &--secondary {
+    background: #118681;
+    color: #FFFFFF;
+  }
+
+  &--danger {
+    background: #E5163F;
+    color: #FFFFFF;
+  }
+
+  &--dark {
+    background: #212D40;
+    color: #FFFFFF;
+  }
+
+  &--light {
+    background: #EDE9E8;
+    color: #212D40;
+  }
 }
