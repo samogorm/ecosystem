@@ -19,7 +19,12 @@
     "url": "https://github.com/samogorm/ecosystem/issues"
   },
   "homepage": "https://github.com/samogorm/ecosystem#readme",
-  "dependencies": {},
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@storybook/addon-actions": "^5.2.4",
