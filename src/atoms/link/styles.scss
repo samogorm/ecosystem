@@ -1,0 +1,41 @@
+@import './../../global/styles/imports.scss';
+
+.link {
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 0.1em solid;
+  }
+
+  &--primary {
+    color: getColor(primary, base);
+
+    &:hover {
+      color: getColor(primary, dark);
+    }
+  }
+
+  &--secondary {
+    color: getColor(secondary, base);
+
+    &:hover {
+      color: getColor(secondary, dark);
+    }
+  }
+
+  &--danger {
+    color: getColor(danger, base);
+
+    &:hover {
+      color: getColor(danger, dark);
+    }
+  }
+
+  &--dark {
+    color: getColor(dark, base);
+
+    &:hover {
+      color: getColor(dark, dark);
+    }
+  }
+}

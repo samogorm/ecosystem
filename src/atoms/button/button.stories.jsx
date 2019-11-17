@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 
 import Button from './index';
 
-import './../../global/styles/stories/button.scss';
+import './../../global/styles/stories/default.scss';
 
 const clicked = () => console.log('Clicked button...');
 
 storiesOf('Atoms/Button', module)
   .add('Default', () => (
     <Fragment>
-      <div className="button-stories-layout">
-        <div className="button-story-group">
+      <div className="stories-layout">
+        <div className="story-group">
           <label>Primary</label>
           <Button
             label="Button label"
@@ -19,7 +19,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Secondary</label>
           <Button
             label="Button label"
@@ -27,7 +27,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Danger</label>
           <Button
             label="Button label"
@@ -35,7 +35,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Dark</label>
           <Button
             label="Button label"
@@ -43,7 +43,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Light</label>
           <Button
             label="Button label"
@@ -56,8 +56,8 @@ storiesOf('Atoms/Button', module)
   ))
   .add('Ghost', () => (
     <Fragment>
-      <div className="button-stories-layout">
-        <div className="button-story-group">
+      <div className="stories-layout">
+        <div className="story-group">
           <label>Primary</label>
           <Button
             label="Button label"
@@ -66,7 +66,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Secondary</label>
           <Button
             label="Button label"
@@ -75,7 +75,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Danger</label>
           <Button
             label="Button label"
@@ -84,7 +84,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Dark</label>
           <Button
             label="Button label"
@@ -93,7 +93,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Light</label>
           <Button
             label="Button label"
@@ -107,8 +107,8 @@ storiesOf('Atoms/Button', module)
   ))
   .add('Small', () => (
     <Fragment>
-      <div className="button-stories-layout">
-        <div className="button-story-group">
+      <div className="stories-layout">
+        <div className="story-group">
           <label>Primary</label>
           <Button
             label="Button label"
@@ -117,7 +117,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Secondary</label>
           <Button
             label="Button label"
@@ -126,7 +126,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Danger</label>
           <Button
             label="Button label"
@@ -135,7 +135,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Dark</label>
           <Button
             label="Button label"
@@ -144,7 +144,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Light</label>
           <Button
             label="Button label"
@@ -158,8 +158,8 @@ storiesOf('Atoms/Button', module)
   ))
   .add('Block', () => (
     <Fragment>
-      <div className="button-stories-layout button-stories-layout--column">
-        <div className="button-story-group">
+      <div className="stories-layout stories-layout--column">
+        <div className="story-group">
           <label>Primary</label>
           <Button
             label="Button label"
@@ -168,7 +168,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Secondary</label>
           <Button
             label="Button label"
@@ -177,7 +177,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Danger</label>
           <Button
             label="Button label"
@@ -186,7 +186,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Dark</label>
           <Button
             label="Button label"
@@ -195,7 +195,7 @@ storiesOf('Atoms/Button', module)
             action={() => clicked()}
           />
         </div>
-        <div className="button-story-group">
+        <div className="story-group">
           <label>Light</label>
           <Button
             label="Button label"

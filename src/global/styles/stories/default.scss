@@ -1,11 +1,11 @@
-.button-stories-layout {
+.stories-layout {
   display: flex;
 
   &--column {
     flex-direction: column;
   }
 
-  .button-story-group {
+  .story-group {
     display: flex;
     flex-direction: column;
     margin: 0.5em 1em;
