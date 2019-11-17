@@ -1,0 +1,18 @@
+.button-stories-layout {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  .button-story-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 1em;
+
+    label {
+      font-style: italic;
+      margin: 0.5em 0;
+    }
+  }
+}
