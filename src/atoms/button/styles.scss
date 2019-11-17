@@ -8,7 +8,7 @@
 
   &--primary {
     background: getColor(yellow, base);
-    color: getColor(darkBlue, base);
+    color: getColor(white, base);
 
     &:hover {
       background: getColor(yellow, dark);
@@ -48,6 +48,59 @@
 
     &:hover {
       background: getColor(lightGrey, dark);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+
+    &--primary {
+      border: 0.1em solid getColor(yellow);
+      color: getColor(yellow, base);
+
+      &:hover {
+        background: getColor(yellow, base);
+        color: getColor(white, base);
+      }
+    }
+
+    &--secondary {
+      border: 0.1em solid getColor(green);
+      color: getColor(green, base);
+
+      &:hover {
+        background: getColor(green, base);
+        color: getColor(white, base);
+      }
+    }
+
+    &--danger {
+      border: 0.1em solid getColor(red);
+      color: getColor(red, base);
+
+      &:hover {
+        background: getColor(red, base);
+        color: getColor(white, base);
+      }
+    }
+
+    &--dark {
+      border: 0.1em solid getColor(darkBlue);
+      color: getColor(darkBlue, base);
+
+      &:hover {
+        background: getColor(darkBlue, base);
+        color: getColor(white, base);
+      }
+    }
+
+    &--light {
+      border: 0.1em solid getColor(lightGrey);
+      color: getColor(darkBlue, base);
+
+      &:hover {
+        background: getColor(lightGrey, base);
+      }
     }
   }
 }
