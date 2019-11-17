@@ -3,40 +3,42 @@ import { storiesOf } from '@storybook/react';
 
 import Button from './index';
 
+const clicked = () => console.log('Clicked button...');
+
 storiesOf('Atoms/Button', module)
-  .add('Primary', () => (
+  .add('Default', () => (
     <Button 
       label="Button label"
       colour="primary"
-      action={ () => console.log('Clicked the primary button') } 
+      action={ () => clicked() } 
     />
   ))
   .add('Secondary', () => (
     <Button
       label="Button label"
       colour="secondary"
-      action={() => console.log('Clicked the secondary button')}
+      action={ () => clicked() }
     />
   ))
   .add('Danger', () => (
     <Button
       label="Button label"
       colour="danger"
-      action={() => console.log('Clicked the danger button')}
+      action={ () => clicked() }
     />
   ))
   .add('Dark', () => (
     <Button
       label="Button label"
       colour="dark"
-      action={() => console.log('Clicked the dark button')}
+      action={() => clicked()} 
     />
   ))
   .add('Light', () => (
     <Button
       label="Button label"
       colour="light"
-      action={() => console.log('Clicked the light button')}
+      action={ () => clicked() }
     />
   ))
   .add('Ghost - Primary', () => (
@@ -44,7 +46,7 @@ storiesOf('Atoms/Button', module)
       label="Button label"
       colour="primary"
       type="ghost"
-      action={() => console.log('Clicked the primary button')}
+      action={ () => clicked() }
     />
   ))
   .add('Ghost - Secondary', () => (
@@ -52,7 +54,7 @@ storiesOf('Atoms/Button', module)
       label="Button label"
       colour="secondary"
       type="ghost"
-      action={() => console.log('Clicked the primary button')}
+      action={ () => clicked() }
     />
   ))
   .add('Ghost - Danger', () => (
@@ -60,7 +62,7 @@ storiesOf('Atoms/Button', module)
       label="Button label"
       colour="danger"
       type="ghost"
-      action={() => console.log('Clicked the primary button')}
+      action={ () => clicked() }
     />
   ))
   .add('Ghost - Dark', () => (
@@ -68,7 +70,7 @@ storiesOf('Atoms/Button', module)
       label="Button label"
       colour="dark"
       type="ghost"
-      action={() => console.log('Clicked the primary button')}
+      action={ () => clicked() }
     />
   ))
   .add('Ghost - Light', () => (
@@ -76,6 +78,86 @@ storiesOf('Atoms/Button', module)
       label="Button label"
       colour="light"
       type="ghost"
-      action={() => console.log('Clicked the primary button')}
+      action={ () => clicked() }
+    />
+  ))
+  .add('Small - Primary', () => (
+    <Button
+      label="Button label"
+      colour="primary"
+      type="small"
+      action={ () => clicked() }
+    />
+  ))
+  .add('Small - Secondary', () => (
+    <Button
+      label="Button label"
+      colour="secondary"
+      type="small"
+      action={() => clicked()}
+    />
+  ))
+  .add('Small - Danger', () => (
+    <Button
+      label="Button label"
+      colour="danger"
+      type="small"
+      action={() => clicked()}
+    />
+  ))
+  .add('Small - Dark', () => (
+    <Button
+      label="Button label"
+      colour="dark"
+      type="small"
+      action={() => clicked()}
+    />
+  ))
+  .add('Small - Light', () => (
+    <Button
+      label="Button label"
+      colour="light"
+      type="small"
+      action={() => clicked()}
+    />
+  ))
+  .add('Block - Primary', () => (
+    <Button
+      label="Button label"
+      colour="primary"
+      type="block"
+      action={() => clicked()}
+    />
+  ))
+  .add('Block - Secondary', () => (
+    <Button
+      label="Button label"
+      colour="secondary"
+      type="block"
+      action={() => clicked()}
+    />
+  ))
+  .add('Block - Danger', () => (
+    <Button
+      label="Button label"
+      colour="secondary"
+      type="block"
+      action={() => clicked()}
+    />
+  ))
+  .add('Block - Dark', () => (
+    <Button
+      label="Button label"
+      colour="dark"
+      type="block"
+      action={() => clicked()}
+    />
+  ))
+  .add('Block - Light', () => (
+    <Button
+      label="Button label"
+      colour="light"
+      type="block"
+      action={() => clicked()}
     />
   ));

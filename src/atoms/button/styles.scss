@@ -6,48 +6,57 @@
   font-size: 1em;
   padding: 0.8em 2em;
 
+  &--small {
+    font-size: 0.9em;
+    padding: 0.7em 2em;
+  }
+
+  &--block {
+    width: 100%;
+  }
+
   &--primary {
-    background: getColor(yellow, base);
+    background: getColor(primary, base);
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(yellow, dark);
+      background: getColor(primary, dark);
     }
   }
 
   &--secondary {
-    background: getColor(green, base);
+    background: getColor(secondary, base);
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(green, dark);
+      background: getColor(secondary, dark);
     }
   }
 
   &--danger {
-    background: getColor(red, base);;
+    background: getColor(danger, base);;
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(red, dark);
+      background: getColor(danger, dark);
     }
   }
 
   &--dark {
-    background: getColor(darkBlue, base);
+    background: getColor(dark, base);
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(darkBlue, dark);
+      background: getColor(dark, dark);
     }
   }
 
   &--light {
-    background: getColor(lightGrey, base);
-    color: getColor(darkBlue, base);
+    background: getColor(light, base);
+    color: getColor(dark, base);
 
     &:hover {
-      background: getColor(lightGrey, dark);
+      background: getColor(light, dark);
     }
   }
 
@@ -55,51 +64,51 @@
     background: transparent;
 
     &--primary {
-      border: 0.1em solid getColor(yellow);
-      color: getColor(yellow, base);
+      border: 0.1em solid getColor(primary);
+      color: getColor(primary, base);
 
       &:hover {
-        background: getColor(yellow, base);
+        background: getColor(primary, base);
         color: getColor(white, base);
       }
     }
 
     &--secondary {
-      border: 0.1em solid getColor(green);
-      color: getColor(green, base);
+      border: 0.1em solid getColor(secondary);
+      color: getColor(secondary, base);
 
       &:hover {
-        background: getColor(green, base);
+        background: getColor(secondary, base);
         color: getColor(white, base);
       }
     }
 
     &--danger {
-      border: 0.1em solid getColor(red);
-      color: getColor(red, base);
+      border: 0.1em solid getColor(danger);
+      color: getColor(danger, base);
 
       &:hover {
-        background: getColor(red, base);
+        background: getColor(danger, base);
         color: getColor(white, base);
       }
     }
 
     &--dark {
-      border: 0.1em solid getColor(darkBlue);
-      color: getColor(darkBlue, base);
+      border: 0.1em solid getColor(dark);
+      color: getColor(dark, base);
 
       &:hover {
-        background: getColor(darkBlue, base);
+        background: getColor(dark, base);
         color: getColor(white, base);
       }
     }
 
     &--light {
-      border: 0.1em solid getColor(lightGrey);
-      color: getColor(darkBlue, base);
+      border: 0.1em solid getColor(light);
+      color: getColor(dark, base);
 
       &:hover {
-        background: getColor(lightGrey, base);
+        background: getColor(light, base);
       }
     }
   }

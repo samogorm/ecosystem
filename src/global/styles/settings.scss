@@ -1,49 +1,49 @@
 // Colors
-$darkBlue: #212d40;
-$green: #118681;
-$lightGrey: #ede9e8;
-$red: #e5163f;
+$primary: #ffba49;
+$secondary: #118681;
+$danger: #e5163f;
+$dark: #212d40;
+$light: #ede9e8;
 $white: #ffffff;
-$yellow: #ffba49;
 
 $colorShade: 5%;
 $colorTrans: 0.5;
 
 $colors: (
-  darkBlue: (
-    base: $darkBlue,
-    light: lighten($darkBlue, $colorShade),
-    dark: darken($darkBlue, $colorShade),
-    trans: transparentize($darkBlue, $colorTrans)
+  primary: (
+    base: $primary,
+    light: lighten($primary, $colorShade),
+    dark: darken($primary, $colorShade),
+    trans: transparentize($primary, $colorTrans)
   ),
-  green: (
-    base: $green,
-    light: lighten($green, $colorShade),
-    dark: darken($green, $colorShade),
-    trans: transparentize($green, $colorTrans)
+  secondary: (
+    base: $secondary,
+    light: lighten($secondary, $colorShade),
+    dark: darken($secondary, $colorShade),
+    trans: transparentize($secondary, $colorTrans)
   ),
-  lightGrey: (
-    base: $lightGrey,
-    light: lighten($lightGrey, $colorShade),
-    dark: darken($lightGrey, $colorShade),
-    trans: transparentize($lightGrey, $colorTrans)
+  danger: (
+    base: $danger,
+    light: lighten($danger, $colorShade),
+    dark: darken($danger, $colorShade),
+    trans: transparentize($danger, $colorTrans)
   ),
-  red: (
-    base: $red,
-    light: lighten($red, $colorShade),
-    dark: darken($red, $colorShade),
-    trans: transparentize($red, $colorTrans)
+  dark: (
+    base: $dark,
+    light: lighten($dark, $colorShade),
+    dark: darken($dark, $colorShade),
+    trans: transparentize($dark, $colorTrans)
+  ),
+  light: (
+    base: $light,
+    light: lighten($light, $colorShade),
+    dark: darken($light, $colorShade),
+    trans: transparentize($light, $colorTrans)
   ),
   white: (
     base: $white,
     light: lighten($white, $colorShade),
     dark: darken($white, $colorShade),
     trans: transparentize($white, $colorTrans)
-  ),
-  yellow: (
-    base: $yellow,
-    light: lighten($yellow, $colorShade),
-    dark: darken($yellow, $colorShade),
-    trans: transparentize($yellow, $colorTrans)
   )
 );
