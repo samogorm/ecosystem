@@ -10,11 +10,11 @@ import './../src/global/styles/_imports.scss';
 addDecorator(withKnobs);
 // addDecorator(withPropsTable);
 
-// addParameters({
-//   options: {
-//     theme: ecosystemTheme,
-//   },
-// });
+addParameters({
+  options: {
+    theme: ecosystemTheme,
+  },
+});
 
 const req = require.context('../src', true, /\.stories\.jsx$/);
 function loadStories() {

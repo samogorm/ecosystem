@@ -4,15 +4,17 @@ body {
 }
 
 // Colors
-$primary: #3AB29B;
-$secondary: #015961;
+$primary: #ff6464;
+$secondary: #543864;
 $danger: #e5163f;
-$dark: #21262e;
+$dark: #01024e;
 $light: #ede9e8;
 $white: #ffffff;
+$black: #0C0D1D;
 
 $colorShade: 8%;
 $colorTrans: 0.5;
+$borderRadius: 0.3em;
 
 $colors: (
   primary: (
@@ -50,5 +52,11 @@ $colors: (
     light: lighten($white, $colorShade),
     dark: darken($white, $colorShade),
     trans: transparentize($white, $colorTrans)
+  ),
+  black: (
+    base: $black,
+    light: lighten($black, $colorShade),
+    dark: darken($black, $colorShade),
+    trans: transparentize($black, $colorTrans)
   )
 );
