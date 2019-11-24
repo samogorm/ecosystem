@@ -1,0 +1,20 @@
+@import './../../global/styles/imports.scss';
+
+.input {
+  border: 0.1em solid getColor(grey);
+  border-radius: $borderRadius;
+  box-shadow: none;
+  color: getColor(black, light);
+  font-size: $medium;
+  height: 1.8em;
+  padding: 0.2em 0.5em;
+
+  &:focus {
+    border: 0.1em solid getColor(primary);
+    outline: none;
+  }
+
+  &--error {
+    border: 0.1em solid getColor(danger);
+  }
+}
