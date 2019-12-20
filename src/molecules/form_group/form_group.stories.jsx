@@ -9,8 +9,7 @@ const inputData = {
   label: 'Email Address',
   name: 'email',
   initialValue: '',
-  options: [],
-  callback: null
+  options: []
 };
 
 const selectData = {
@@ -34,7 +33,6 @@ const selectData = {
       selected: false
     },
   ],
-  callback: null
 };
 
 const checkboxData = {
@@ -42,7 +40,6 @@ const checkboxData = {
   name: 'third_party',
   initialValue: '',
   options: [],
-  callback: null
 }
 
 storiesOf('Molecules/FormGroup', module)

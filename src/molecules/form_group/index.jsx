@@ -14,14 +14,14 @@ const FormGroup = ({
 }) => {
 
   const renderFormElement = () => {
-    const { label, name, initialValue, options, callback } = data;
+    const { label, name, initialValue, options } = data;
     switch(type) {
       case 'select':
         return (
           <Select
             selectedValue={options.find(option => option.selected === true)}
             name="email"
-            options={options}
+            options={ options }
           />
         );
       case 'checkbox':
@@ -57,7 +57,6 @@ FormGroup.propTypes = {
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     options: PropTypes.array,
-    callback: PropTypes.func
   })
 };
 
