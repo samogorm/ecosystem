@@ -1,0 +1,11 @@
+@mixin position-checkbox {
+  content: " ";
+  border: 0.1em solid getColor(primary);
+  border-radius: 100%;
+  display: block;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1em;
+}

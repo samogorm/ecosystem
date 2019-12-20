@@ -1,17 +1,5 @@
 @import './../../global/styles/imports.scss';
 
-@mixin position-checkbox {
-  content: " ";
-  border: 0.1em solid getColor(primary);
-  border-radius: $borderRadius;
-  display: block;
-  height: 1em;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1em;
-}
-
 .checkbox {
   opacity: 0;
   position: absolute;
