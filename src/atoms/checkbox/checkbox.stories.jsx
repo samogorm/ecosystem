@@ -20,7 +20,7 @@ storiesOf('Atoms/Checkbox', module)
           <label>Button</label>
           <Checkbox
             label="Yes"
-            name="test"
+            name="my_button"
             type="button"
           />
         </div>
