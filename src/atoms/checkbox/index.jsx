@@ -4,15 +4,21 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 const Checkbox = ({
-  label
+  label,
+  name
 }) => {
 
   return(
    <div className="checkbox__wrapper">
-    <input className="checkbox" type="checkbox" id="test"/>
-    <label htmlFor="test" className="checkbox__label">{ label }</label>
+    <input className="checkbox" type="checkbox" id={ name } name={ name }/>
+    <label htmlFor={ name } className="checkbox__label">{ label }</label>
    </div>
   )
+};
+
+Checkbox.PropTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Checkbox;

@@ -13,6 +13,7 @@ storiesOf('Atoms/Checkbox', module)
           <label>Primary</label>
           <Checkbox
             label="I would like to receive news and offers."
+            name="test"
           />
         </div>
       </div>
