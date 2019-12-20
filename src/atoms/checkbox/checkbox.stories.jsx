@@ -16,6 +16,14 @@ storiesOf('Atoms/Checkbox', module)
             name="test"
           />
         </div>
+        <div className="story-group">
+          <label>Button</label>
+          <Checkbox
+            label="Yes"
+            name="test"
+            type="button"
+          />
+        </div>
       </div>
     </Fragment>
   ));
