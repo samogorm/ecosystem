@@ -40,6 +40,15 @@ storiesOf('Atoms/Select', module)
             options={ options }
           />
         </div>
+        <div className="story-group">
+          <label>Error</label>
+          <Select
+            selectedValue={options.find(option => option.selected === true)}
+            name="email"
+            options={ options }
+            hasError={ true }
+          />
+        </div>
       </div>
     </Fragment>
   ));

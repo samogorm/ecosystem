@@ -7,7 +7,8 @@ import './styles.scss';
 const Select = ({
   selectedValue,
   name,
-  options
+  options,
+  hasError
 }) => {
   let [selected, setSelected] = useState(selectedValue);
 
@@ -22,14 +23,14 @@ const Select = ({
     <div className="select__wrapper">
       <select
         name={ name }
+        defaultValue={ selected }
         onChange={event => {
           let selectedOption = options.find(option => option.value === event.target.value);
           selectedOption.selected = true;
 
           setSelected(selectedOption);
         }}
-        className="select"
-        defaultValue={ selected }
+        className={hasError ? 'select select--error' : 'select'}
       >
         {options.map(option => {
           const { label, value } = option;
@@ -48,10 +49,15 @@ const Select = ({
   );
 };
 
+Select.defaultProps = {
+  hasError: false
+}
+
 Select.propTypes = {
   selectedValue: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
-  options: PropTypes.array.isRequired
+  options: PropTypes.array.isRequired,
+  hasError: PropTypes.bool,
 }
 
 export default Select;
