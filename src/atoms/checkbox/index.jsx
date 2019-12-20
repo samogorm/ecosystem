@@ -16,7 +16,7 @@ const Checkbox = ({
   )
 };
 
-Checkbox.PropTypes = {
+Checkbox.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
