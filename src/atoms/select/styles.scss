@@ -1,0 +1,40 @@
+@import './../../global/styles/imports.scss';
+
+.select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+	appearance: none;
+  color: getColor(black, light);
+  background-color: $white;
+  border: 0.1em solid getColor(grey);
+  border-radius: $borderRadius;
+  display: block;
+	font-size: $medium;
+  max-width: 100%;
+	margin: 0;
+	padding: .6em 2.4em .5em .8em;
+  width: 100%;
+  
+  &:focus {
+    border: 0.1em solid getColor(primary);
+    outline: none;
+  }
+
+  &--error {
+    border: 0.1em solid getColor(danger);
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0.7em;
+    right: 0.8em;
+
+    svg {
+      color: getColor(black, light);
+    }
+  }
+}
