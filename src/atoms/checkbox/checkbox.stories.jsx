@@ -10,7 +10,7 @@ storiesOf('Atoms/Checkbox', module)
     <Fragment>
       <div className="stories-layout">
         <div className="story-group">
-          <label>Primary</label>
+          <label>Default</label>
           <Checkbox
             label="I would like to receive news and offers."
             name="test"
