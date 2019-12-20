@@ -51,13 +51,13 @@ const Select = ({
 
 Select.defaultProps = {
   hasError: false
-}
+};
 
 Select.propTypes = {
   selectedValue: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
   hasError: PropTypes.bool,
-}
+};
 
 export default Select;

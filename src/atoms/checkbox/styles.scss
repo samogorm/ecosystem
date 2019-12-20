@@ -1,0 +1,44 @@
+@import './../../global/styles/imports.scss';
+
+@mixin position-checkbox {
+  content: " ";
+  border: 0.1em solid getColor(primary);
+  border-radius: $borderRadius;
+  display: block;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1em;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__label {
+    color: getColor(black, light);
+    cursor: pointer;
+    display: inline-block;
+    font-size: $medium;
+    height: 1.5em;
+    line-height: 1.5;
+    padding: 0 0 0 2em;
+    position: relative;
+
+    &::before {
+      @include position-checkbox;
+      background-color: transparent;
+    }
+  }
+
+  &:checked + &__label::after {
+    @include position-checkbox;
+    background-color: getColor(primary);
+  }
+}
