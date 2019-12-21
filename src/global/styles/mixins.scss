@@ -1,7 +1,7 @@
 @mixin position-checkbox {
   content: " ";
-  border: 0.1em solid getColor(primary);
-  border-radius: 100%;
+  border: 0.1em solid getColor(grey);
+  border-radius: $borderRadius;
   display: block;
   height: 1em;
   left: 0;
@@ -29,4 +29,9 @@
   &--error {
     border: 0.1em solid getColor(danger);
   }
+}
+
+@mixin remove-button-style {
+  border: none;
+  background: none;
 }

@@ -40,18 +40,61 @@ const checkboxData = {
   name: 'third_party',
   initialValue: '',
   options: [],
-}
+};
+
+const radioData = {
+  label: '',
+  name: 'fave_elton_john_song',
+  initialValue: '',
+  options: [
+    {
+      label: 'None',
+      value: 'none',
+      checked: true
+    },
+    {
+      label: 'Your Song',
+      value: 'Your Song',
+      checked: false
+    },
+    {
+      label: 'Crocodile Rock',
+      value: 'Crocodile Rock',
+      checked: false
+    },
+    {
+      label: 'Benny and the Jets',
+      value: 'Benny and the Jets',
+      checked: false
+    }
+  ]
+};
+
+const textareaData = {
+  label: '',
+  name: 'message',
+  initialValue: '',
+  options: [],
+};
 
 storiesOf('Molecules/FormGroup', module)
   .add('Default', () => (
     <Fragment>
-      <div className="stories-layout">
+      <div className="stories-layout stories-layout--column">
         <div className="story-group">
           <label>Input</label>
           <FormGroup
             type="input"
             label="Email Address"
             data={ inputData }
+          />
+        </div>
+        <div className="story-group">
+          <label>Textarea</label>
+          <FormGroup
+            type="textarea"
+            label="Leave a message"
+            data={textareaData}
           />
         </div>
         <div className="story-group">
@@ -62,13 +105,20 @@ storiesOf('Molecules/FormGroup', module)
             data={ selectData }
           />
         </div>
-
         <div className="story-group">
           <label>Checkbox</label>
           <FormGroup
             type="checkbox"
             label="Other things we need"
             data={ checkboxData }
+          />
+        </div>
+        <div className="story-group">
+          <label>Radio</label>
+          <FormGroup
+            type="radio"
+            label="What's your favourite Elton John song?"
+            data={ radioData }
           />
         </div>
       </div>

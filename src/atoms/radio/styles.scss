@@ -10,23 +10,38 @@
   &__label {
     cursor: pointer;
     display: inline-block;
-    font-size: $medium;
     padding: 0 0 0 2em;
     position: relative;
 
     &::before {
       @include position-checkbox;
+      border-radius: 100%;
       background-color: transparent;
     }
   }
 
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__wrapper {
+    @include remove-button-style;
+    display: flex;
+    font-size: $medium;
+    justify-content: flex-start;
     margin: 0.25em 0;
     position: relative;
+
+    &:focus {
+      @include remove-button-style;
+    }
   }
 
   :checked + &__label::after {
     @include position-checkbox;
     background-color: getColor(primary);
+    border: 0.1em solid getColor(primary, dark);
+    border-radius: 100%;
   }
 }

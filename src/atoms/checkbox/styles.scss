@@ -36,11 +36,12 @@
   &--default:checked + &__label::after {
     @include position-checkbox;
     background-color: getColor(primary);
+    border: 0.1em solid getColor(primary, dark);
   }
 
   &--button:checked + &__label {
     background-color: getColor(primary);
-    border: 0.1em solid getColor(primary);
+    border: 0.1em solid getColor(primary, dark);
     color: $white;
   }
 }
