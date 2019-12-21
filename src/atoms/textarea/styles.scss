@@ -1,5 +1,6 @@
 @import './../../global/styles/imports.scss';
 
-.input {
+.textarea {
   @include form-element;
+  min-height: 4em;
 }

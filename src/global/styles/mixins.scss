@@ -9,3 +9,24 @@
   top: 0;
   width: 1em;
 }
+
+@mixin form-element {
+  background-color: $white;
+  border: 0.1em solid getColor(grey);
+  border-radius: $borderRadius;
+  box-shadow: none;
+  color: getColor(black, light);
+  font-size: $medium;
+  height: $inputHeight;
+  padding: $inputPadding;
+  width: 100%;
+
+  &:focus {
+    border: 0.1em solid getColor(primary);
+    outline: none;
+  }
+
+  &--error {
+    border: 0.1em solid getColor(danger);
+  }
+}
