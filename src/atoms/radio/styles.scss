@@ -35,6 +35,12 @@
 
     &:focus {
       @include remove-button-style;
+      color: getColor(black, light);
+    }
+
+    &:active {
+      @include remove-button-style;
+      color: getColor(black, light);
     }
   }
 
