@@ -41,7 +41,7 @@ const Radio = ({
               className="radio"
               onChange={ e => changeOption(e.target.value) }
             />
-            <span className={checked ? 'radio__selection radio__selection-checked' : 'radio__selection'}></span>
+            <span className={checked ? 'radio__selection radio__selection--checked' : 'radio__selection'}></span>
             { label }
           </label>
         );

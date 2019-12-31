@@ -33,6 +33,21 @@
     }
   }
 
+  &__selection {
+    background-color: getColor(primary);
+    border-radius: $borderRadius - 0.1em;
+    display: none;
+    height: 0.7em;
+    left: 0.25em;
+    position: absolute;
+    top: 0.25em;
+    width: 0.7em;
+
+    &--checked {
+      display: flex;
+    }
+  }
+
   &--default:checked + &__label::after {
     @include position-checkbox;
     background-color: getColor(primary);

@@ -9,10 +9,24 @@ const Checkbox = ({
   type
 }) => {
 
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => console.log('updated'), [checked]);
+
   return(
     <div className={`checkbox__wrapper checkbox__wrapper--${type}`} >
-      <input className={`checkbox checkbox--${ type }`} type="checkbox" id={ name } name={ name }/>
-      <label htmlFor={ name } className={`checkbox__label checkbox__label--${ type }`}>{ label }</label>
+      <label htmlFor={ name } className={`checkbox__label checkbox__label--${ type }`}>
+        <input
+          className={`checkbox checkbox--${type}`}
+          type="checkbox"
+          id={ name }
+          name={ name }
+          defaultChecked={ checked }
+          onChange={ () => setChecked(!checked) }
+        />
+        <span className={checked ? 'checkbox__selection checkbox__selection--checked' : 'checkbox__selection'}></span>
+        { label }
+      </label>
     </div>
   )
 };
