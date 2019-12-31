@@ -9,21 +9,21 @@ const Radio = ({
   options,
   defaultChecked
 }) => {
-  const [checked, setChecked] = useState(defaultChecked);
+  const [checkedValue, setCheckedValue] = useState(defaultChecked);
 
-  const changeOption = event => {
-    let checkedOption = options.find(option => option.value === event.target.getAttribute('data-radio'));
+  const changeOption = value => {
+    let checkedOption = options.find(option => option.value === value);
     checkedOption.checked = true;
 
-    setChecked(checkedOption);
+    setCheckedValue(checkedOption);
   };
 
   const removePrevState = () => {
-    let prev = options.find(option => (option.checked === true) && (option.value !== checked.value));
+    let prev = options.find(option => (option.checked === true));
     if (prev !== undefined) prev.checked = false;
   }
 
-  useEffect(() => removePrevState(), [checked]);
+  useEffect(() => removePrevState(), [checkedValue]);
 
   return (
     <div className="radio__block">
@@ -31,17 +31,19 @@ const Radio = ({
         const key = `${id}-${index}`;
         const { label, value, checked } = option;
         return (
-          <button className="radio__wrapper" key={ key } data-radio={ value } onClick={ event => changeOption(event) }>
+          <label htmlFor={ key } key={ key } className="radio__label">
             <input
               type="radio"
               id={ key }
               name={ name }
               value={ value }
               defaultChecked={ checked }
-              data-radio={ value }
-              className="radio" />
-            <label htmlFor={key} className="radio__label" data-radio={ value }>{ label }</label>
-          </button>
+              className="radio"
+              onChange={ e => changeOption(e.target.value) }
+            />
+            <span className={checked ? 'radio__selection radio__selection-checked' : 'radio__selection'}></span>
+            { label }
+          </label>
         );
       })}
     </div>
