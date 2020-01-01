@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Text = ({ content, size, weight }) => {
   return(
-    <p className={`text text--${size} text--${weight}`}>{ content }</p>
+    <p className={`text text--${ size } text--${ weight }`}>{ content }</p>
   );
 };
 
