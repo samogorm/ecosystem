@@ -65,5 +65,26 @@ storiesOf('Atoms/Image', module)
           />
         </div>
       </div>
+
+      <div className="stories-layout">
+        <div className="story-group">
+          <label>Circle</label>
+          <Image
+            src="http://cdn.shopify.com/s/files/1/0865/6500/products/61t4Zr0AYRL._SL1000_1024x1024.jpg?v=1571439213"
+            label="Spiderman image"
+            shape="circle"
+            size="md"
+          />
+        </div>
+        <div className="story-group">
+          <label>Square</label>
+          <Image
+            src="http://cdn.shopify.com/s/files/1/0865/6500/products/61t4Zr0AYRL._SL1000_1024x1024.jpg?v=1571439213"
+            label="Spiderman image"
+            shape="square"
+            size="md"
+          />
+        </div>
+      </div>
     </Fragment>
   ));
