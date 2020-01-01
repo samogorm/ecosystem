@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.scss';
+
 const Text = ({ content, size, weight }) => {
   return(
     <p className={`text text--${ size } text--${ weight }`}>{ content }</p>
   );
+};
+
+Text.defaultProps = {
+  size: 'medium'
 };
 
 Text.propTypes = {
