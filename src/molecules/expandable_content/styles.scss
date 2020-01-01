@@ -30,6 +30,10 @@
   }
 
   &--open {
+    .expandable-content__title {
+      border-bottom: 0.1em solid getColor(primary);
+    }
+
     .expandable-content__content {
       display: flex;
     }
