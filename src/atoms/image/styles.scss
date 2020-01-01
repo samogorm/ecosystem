@@ -1,0 +1,35 @@
+@import './../../global/styles/imports.scss';
+
+.image {
+  &--circle {
+    border-radius: 100%;
+  }
+
+  &--square {
+    border-radius: $borderRadius;
+  }
+
+  &--xs {
+    width: 2.5em;
+  }
+
+  &--sm {
+    width: 5em;
+  }
+
+  &--md {
+    width: 7.5em;
+  }
+
+  &--lg {
+    width: 10em;
+  }
+
+  &--xlg {
+    width: 12.5em;
+  }
+
+  &--xxlg {
+    width: 15em;
+  }
+}
