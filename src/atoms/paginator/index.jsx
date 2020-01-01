@@ -16,7 +16,7 @@ const Paginator = ({ pages, defaultPage }) => {
 
   const isMappable = page => (page !== firstPage) && (page !== lastPage);
   const isCurrentPage = page => page === currentPage;
-  const shouldMinifyButtons = () => pages.length > 5;
+  const shouldMinifyButtons = () => pages.length > 6;
   const getPage = page => isMappable(page) && getPageButton(page);
 
   const getPageButton = page => {
@@ -39,9 +39,9 @@ const Paginator = ({ pages, defaultPage }) => {
         { <ChevronLeft /> }
       </button>
       <strong>{ getPageButton(firstPage) }</strong>
-      { shouldMinifyButtons && (<span className="paginator__elipsis">...</span>) }
-      { shouldMinifyButtons ? minifiedPages.map(page => getPage(page)) : pages.map(page => getPage(page)) }
-      { shouldMinifyButtons && (<span className="paginator__elipsis">...</span>) }
+      { shouldMinifyButtons() && (<span className="paginator__elipsis">...</span>) }
+      { shouldMinifyButtons() ? minifiedPages.map(page => getPage(page)) : pages.map(page => getPage(page)) }
+      { shouldMinifyButtons() && (<span className="paginator__elipsis">...</span>) }
       <strong>{ getPageButton(lastPage) }</strong>
       <button
         className="paginator__button"
