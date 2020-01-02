@@ -12,7 +12,7 @@
     margin: 0 0.1em;
     min-width: 2.5em;
     padding: $inputPadding;
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
 
     &:hover {
       background-color: getColor(primary, trans);
@@ -34,6 +34,6 @@
   }
 
   &__button-disabled {
-    display: none;
+    visibility: hidden;
   }
 }

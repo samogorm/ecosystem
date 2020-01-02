@@ -17,15 +17,28 @@ const Paginator = ({ pages, defaultPage }) => {
   
   const getPreviousPage = () => currentPage !== firstPage ? currentPage - 1 : currentPage;
   const getNextPage = () =>  currentPage !== lastPage ? currentPage + 1 : currentPage;
-  const minifiedPages = [getPreviousPage(), currentPage, getNextPage()];
 
-  const isMappable = page => (page !== firstPage) && (page !== lastPage);
+  const getMinifiedPages = () => {
+    let minifiedPages = [getPreviousPage(), currentPage, getNextPage()];
+    if(currentPage === lastPage) {
+      minifiedPages = [currentPage - 2, currentPage - 1, currentPage];
+    }
+
+    if(currentPage === firstPage) {
+      minifiedPages = [currentPage, currentPage + 1, currentPage + 2];
+    }
+
+    return minifiedPages;
+  }
+
+  const isMappable = page => page !== firstPage && page !== lastPage;
   const isCurrentPage = page => page === currentPage;
 
   const shouldMinifyButtons = () => pages.length > 6;
-  const shouldDisplayElipsis = () => shouldMinifyButtons() && (currentPage !== currentPage + 1);
-  const shouldDisableButton = page => currentPage === page;
+  const showLeftElipsis = () => shouldMinifyButtons() && firstPage !== currentPage - 1 && firstPage !== currentPage;
+  const showRightElipsis = () => shouldMinifyButtons() && currentPage !== lastPage - 1 && lastPage !== currentPage;
 
+  const shouldDisableButton = page => currentPage === page;
   const getPage = page => isMappable(page) && getPageButton(page);
 
   const disableNavButtons = () => {
@@ -56,9 +69,9 @@ const Paginator = ({ pages, defaultPage }) => {
         { <ChevronLeft /> }
       </button>
       { getPageButton(firstPage) }
-      { shouldDisplayElipsis() && (<span className="paginator__elipsis">...</span>) }
-      { shouldMinifyButtons() ? minifiedPages.map(page => getPage(page)) : pages.map(page => getPage(page)) }
-      { shouldDisplayElipsis() && (<span className="paginator__elipsis">...</span>) }
+      { showLeftElipsis() && (<span className="paginator__elipsis">...</span>) }
+      { shouldMinifyButtons() ? getMinifiedPages().map(page => getPage(page)) : pages.map(page => getPage(page)) }
+      { showRightElipsis() && (<span className="paginator__elipsis">...</span>) }
       { getPageButton(lastPage) }
       <button
         className={`paginator__button ${isNextDisabled ? 'paginator__button-disabled' : ''}`}

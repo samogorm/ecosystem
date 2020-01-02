@@ -13,7 +13,7 @@ storiesOf('Atoms/Paginator', module)
     <Fragment>
       <div className="stories-layout stories-layout--column">
         <div className="story-group">
-          <label>Default</label>
+          <label>Minified</label>
           <Paginator
             pages={ pages }
             defaultPage="3"
