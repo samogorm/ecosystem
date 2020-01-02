@@ -20,13 +20,9 @@ const Paginator = ({ pages, defaultPage }) => {
 
   const getMinifiedPages = () => {
     let minifiedPages = [getPreviousPage(), currentPage, getNextPage()];
-    if(currentPage === lastPage) {
-      minifiedPages = [currentPage - 2, currentPage - 1, currentPage];
-    }
 
-    if(currentPage === firstPage) {
-      minifiedPages = [currentPage, currentPage + 1, currentPage + 2];
-    }
+    if(currentPage === lastPage) minifiedPages = [currentPage - 2, currentPage - 1, currentPage];
+    if(currentPage === firstPage) minifiedPages = [currentPage, currentPage + 1, currentPage + 2];
 
     return minifiedPages;
   }
