@@ -7,6 +7,11 @@ import './styles.scss';
 
 const Paginator = ({ pages, defaultPage }) => {
   const [currentPage, setCurrentPage] = useState(Number(defaultPage));
+  const [isNextDisabled, setIsNextDisabled] = useState(false);
+  const [isPrevDisabled, setIsPrevDisabled] = useState(false);
+
+  useEffect(() => disableNavButtons(), [currentPage]);
+
   const firstPage = pages[0];
   const lastPage = pages[pages.length - 1];
   
@@ -16,13 +21,25 @@ const Paginator = ({ pages, defaultPage }) => {
 
   const isMappable = page => (page !== firstPage) && (page !== lastPage);
   const isCurrentPage = page => page === currentPage;
+
   const shouldMinifyButtons = () => pages.length > 6;
+  const shouldDisplayElipsis = () => shouldMinifyButtons() && (currentPage !== currentPage + 1);
+  const shouldDisableButton = page => currentPage === page;
+
   const getPage = page => isMappable(page) && getPageButton(page);
+
+  const disableNavButtons = () => {
+    const shouldDisablePrev = shouldDisableButton(firstPage);
+    setIsPrevDisabled(shouldDisablePrev);
+
+    const shouldDisableNext = shouldDisableButton(lastPage);
+    setIsNextDisabled(shouldDisableNext);
+  };
 
   const getPageButton = page => {
     return(
       <button
-        className={isCurrentPage(page) ? 'paginator__button paginator__button-active' : 'paginator__button'}
+        className={`paginator__button ${isCurrentPage(page) ? 'paginator__button-active' : ''}`}
         onClick={() => setCurrentPage(page)}
       >
         { page }
@@ -33,18 +50,18 @@ const Paginator = ({ pages, defaultPage }) => {
   return(
     <div className="paginator">
       <button
-        className="paginator__button"
+        className={`paginator__button ${isPrevDisabled ? 'paginator__button-disabled' : ''}`}
         onClick={() => setCurrentPage(getPreviousPage())}
       >
         { <ChevronLeft /> }
       </button>
-      <strong>{ getPageButton(firstPage) }</strong>
-      { shouldMinifyButtons() && (<span className="paginator__elipsis">...</span>) }
+      { getPageButton(firstPage) }
+      { shouldDisplayElipsis() && (<span className="paginator__elipsis">...</span>) }
       { shouldMinifyButtons() ? minifiedPages.map(page => getPage(page)) : pages.map(page => getPage(page)) }
-      { shouldMinifyButtons() && (<span className="paginator__elipsis">...</span>) }
-      <strong>{ getPageButton(lastPage) }</strong>
+      { shouldDisplayElipsis() && (<span className="paginator__elipsis">...</span>) }
+      { getPageButton(lastPage) }
       <button
-        className="paginator__button"
+        className={`paginator__button ${isNextDisabled ? 'paginator__button-disabled' : ''}`}
         onClick={() => setCurrentPage(getNextPage())}
       >
         { <ChevronRight /> }

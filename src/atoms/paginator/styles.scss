@@ -7,7 +7,7 @@
     border-radius: $borderRadius;
     box-shadow: none;
     color: getColor(black, light);
-    font-size: $medium;
+    font-size: $small;
     height: 2.5em;
     margin: 0 0.1em;
     min-width: 2.5em;
@@ -28,7 +28,12 @@
   }
 
   &__elipsis {
+    color: getColor(black);
     margin: 0 0.2em;
     letter-spacing: 0.1em;
+  }
+
+  &__button-disabled {
+    display: none;
   }
 }

@@ -23,7 +23,7 @@ storiesOf('Atoms/Paginator', module)
           <label>Default</label>
           <Paginator
             pages={smallPages}
-            defaultPage="2"
+            defaultPage="1"
           />
         </div>
       </div>
