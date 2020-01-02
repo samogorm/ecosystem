@@ -83,4 +83,13 @@ const Paginator = ({ pages, defaultPage }) => {
   );
 };
 
+Paginator.defaultProps = {
+  defaultPage: "1"
+};
+
+Paginator.propTypes = {
+  pages: PropTypes.array.isRequired,
+  defaultPage: PropTypes.string,
+};
+
 export default Paginator;
