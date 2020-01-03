@@ -38,6 +38,6 @@
   }
 
   &:hover {
-    background: getColor(primary, trans);
+    background: transparentize(getColor(black), 0.96);
   }
 }
