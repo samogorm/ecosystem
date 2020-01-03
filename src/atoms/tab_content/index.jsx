@@ -12,7 +12,7 @@ const TabContent = ({ tab, content, active }) => {
 };
 
 TabContent.propTypes = {
-  tab: PropTypes.string.isRequired,
+  tab: PropTypes.any.isRequired,
   content: PropTypes.any.isRequired,
   active: PropTypes.bool.isRequired
 };

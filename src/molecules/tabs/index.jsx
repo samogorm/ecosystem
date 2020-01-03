@@ -14,6 +14,7 @@ const Tabs = ({ tabs, defaultTab }) => {
       <div className="tabs__navigator">
         {tabs.map(tab => 
           <TabButton
+            key={tab.id}
             tab={ tab.id }
             label={ tab.title }
             active={tab.id == activeTab }
@@ -24,6 +25,7 @@ const Tabs = ({ tabs, defaultTab }) => {
       <div className="tabs__content-wrapper">
         {tabs.map(tab =>
           <TabContent
+            key={ tab.id }
             tab={ tab.id }
             content={ tab.content }
             active={ tab.id == activeTab }

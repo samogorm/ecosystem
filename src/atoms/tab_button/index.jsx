@@ -17,8 +17,10 @@ const TabButton = ({ tab, label, active, onClick }) => {
 };
 
 TabButton.propTypes = {
+  tab: PropTypes.any.isRequired,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  active: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default TabButton;
