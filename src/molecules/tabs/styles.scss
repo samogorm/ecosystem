@@ -1,0 +1,11 @@
+@import './../../global/styles/_imports.scss';
+
+.tabs {
+  &__navigator {
+    background: getColor(light, trans);
+    border: 0.1em solid getColor(grey, trans);
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
