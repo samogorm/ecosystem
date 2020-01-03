@@ -25,6 +25,7 @@ const Tabs = ({ tabs, defaultTab }) => {
         {tabs.map(tab =>
           <TabContent
             tab={ tab.id }
+            content={ tab.content }
             active={ tab.id == activeTab }
           />
         )}

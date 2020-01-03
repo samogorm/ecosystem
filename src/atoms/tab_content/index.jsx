@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const TabContent = ({ tab, active }) => {
+const TabContent = ({ tab, content, active }) => {
   return(
     <div data-tab={tab} className={active ? 'tab-content tab-content--active' : 'tab-content'}>
-      Tab { tab }
+      { content }
     </div>
   );
 };
