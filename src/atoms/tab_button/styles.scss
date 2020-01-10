@@ -9,17 +9,9 @@
   position: relative;
   transition: all .2s ease-in-out;
 
-  &:first-child {
-    border-radius: $borderRadius - 0.1em 0 0 $borderRadius - 0.1em;
-  }
-
-  &:last-child {
-    border-radius: 0 $borderRadius - 0.1em $borderRadius - 0.1em 0;
-  }
-
   &__border {
     background-color: getColor(primary);
-    bottom: -0.1em;
+    bottom: -0.15em;
     display: none;
     height: 0.15em;
     left: 0em;
@@ -38,5 +30,6 @@
 
   &:hover {
     background: transparentize(getColor(black), 0.96);
+    cursor: pointer;
   }
 }

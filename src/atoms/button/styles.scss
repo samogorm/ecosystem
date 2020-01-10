@@ -6,9 +6,10 @@
   font-size: 1em;
   padding: 0.8em 2em;
   transition: all .2s ease-in-out;
+  box-shadow: $boxShadow;
 
   &:hover {
-    transition: all .2s ease-in-out;
+   cursor: pointer;
   }
 
   &--small {
@@ -25,7 +26,7 @@
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(primary, dark);
+      background: getColor(primary, light);
     }
   }
 
@@ -34,7 +35,7 @@
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(secondary, dark);
+      background: getColor(secondary, light);
     }
   }
 
@@ -43,7 +44,7 @@
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(danger, dark);
+      background: getColor(danger, light);
     }
   }
 
@@ -52,7 +53,7 @@
     color: getColor(white, base);
 
     &:hover {
-      background: getColor(dark, dark);
+      background: getColor(dark, light);
     }
   }
 
@@ -61,7 +62,7 @@
     color: getColor(dark, base);
 
     &:hover {
-      background: getColor(light, dark);
+      background: getColor(light, light);
     }
   }
 
@@ -74,7 +75,7 @@
 
       &:hover {
         background: getColor(primary, base);
-        color: getColor(white, base);
+        color: getColor(white, light);
       }
     }
 
@@ -84,7 +85,7 @@
 
       &:hover {
         background: getColor(secondary, base);
-        color: getColor(white, base);
+        color: getColor(white, light);
       }
     }
 

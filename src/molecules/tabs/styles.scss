@@ -2,8 +2,7 @@
 
 .tabs {
   &__navigator {
-    border: 0.1em solid getColor(grey);
-    border-radius: $borderRadius;
+    border-bottom: 0.1em solid getColor(grey);
     display: flex;
     justify-content: space-evenly;
   }
