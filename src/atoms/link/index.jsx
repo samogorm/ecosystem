@@ -5,7 +5,7 @@ import './styles.scss';
 
 const Link = ({ label, to, colour }) => (
   <a href={to} className={`link link--${colour}`}>
-    <strong>{label}</strong>
+   { label }
   </a>
 );
 

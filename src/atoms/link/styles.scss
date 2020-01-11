@@ -2,40 +2,45 @@
 
 .link {
   text-decoration: none;
-
-  &:hover {
-    border-bottom: 0.1em solid;
-  }
+  transition: all .3s ease-in-out;
 
   &--primary {
-    color: getColor(primary, base);
+    color: getColor(primary);
 
     &:hover {
-      color: getColor(primary, dark);
+      color: getColor(primary, trans);
     }
   }
 
   &--secondary {
-    color: getColor(secondary, base);
+    color: getColor(secondary);
 
     &:hover {
-      color: getColor(secondary, dark);
+      color: getColor(secondary, trans);
     }
   }
 
   &--danger {
-    color: getColor(danger, base);
+    color: getColor(danger);
 
     &:hover {
-      color: getColor(danger, dark);
+      color: getColor(danger, trans);
     }
   }
 
   &--dark {
-    color: getColor(dark, base);
+    color: getColor(dark);
 
     &:hover {
-      color: getColor(dark, dark);
+      color: getColor(dark, trans);
+    }
+  }
+
+  &--light {
+    color: getColor(black, trans);
+
+    &:hover {
+      color: getColor(black);
     }
   }
 }

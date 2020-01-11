@@ -41,6 +41,14 @@ storiesOf('Atoms/Link', module)
             colour="dark"
           />
         </div>
+        <div className="story-group">
+          <label>Light</label>
+          <Link
+            label="I am a link"
+            to="#"
+            colour="light"
+          />
+        </div>
       </div>
     </Fragment>
   ));
