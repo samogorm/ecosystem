@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import LoginForm from './index';
 
-// import './../../global/styles/stories/default.scss';
+import './../../global/styles/stories/default.scss';
 
 storiesOf('Organisms/LoginForm', module)
   .add('Default', () => (
