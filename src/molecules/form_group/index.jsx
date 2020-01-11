@@ -33,7 +33,6 @@ const FormGroup = ({
           <Checkbox
             label={ label }
             name={ name }
-            validationRules={ validationRules }
           />
         );
       case 'radio':
@@ -43,7 +42,6 @@ const FormGroup = ({
             name={ name }
             options={ options }
             defaultChecked={ options.find(option => option.checked === true) }
-            validationRules={ validationRules }
           />
         );
       case 'textarea':
