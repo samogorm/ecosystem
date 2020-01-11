@@ -16,6 +16,18 @@ const Input = ({
   let [isValid, setIsValid] = useState(true);
   let [validationItems, setValidationItems] = useState([]);
 
+  const validateField = () => {
+    if (Object.keys(validationRules).length > 0) {
+      const validationItems = ValidateInput(value, validationRules);
+      const isValidInput = validationItems.every(item => item.valid === true);
+  
+      setIsValid(isValidInput);
+      setValidationItems(validationItems);
+    } else {
+      setIsValid(true);
+    }
+  }
+
   return (
     <div>
       <input
@@ -23,13 +35,7 @@ const Input = ({
         value={ value }
         name={ name }
         onChange={ (event) => setValue(event.target.value) }
-        onBlur={() => {
-          const validationItems = ValidateInput(value, validationRules);
-          const isValidInput = validationItems.every(item => item.valid === true);
-
-          setIsValid(isValidInput);
-          setValidationItems(validationItems);
-        }}
+        onBlur={() => validateField() }
         placeholder={ placeholder }
         className={ isValid ? 'input' : 'input input--error' }
       />
@@ -37,6 +43,7 @@ const Input = ({
       {!isValid && 
         validationItems.filter(item => !item.valid).map(item => (
           <ErrorMessage
+            key={`error-message-${item.type}`}
             message={item.message}
           />
         ))
@@ -45,15 +52,15 @@ const Input = ({
   );
 }
 
-// Input.defaultProps = {
-//   validationRules: []
-// };
+Input.defaultProps = {
+  validationRules: {}
+};
 
 Input.propTypes = {
   initialValue: PropTypes.any.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  validationRules: PropTypes.array
+  validationRules: PropTypes.object
 };
 
 export default Input;
