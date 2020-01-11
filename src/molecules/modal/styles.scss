@@ -1,0 +1,52 @@
+@import './../../global/styles/imports.scss';
+
+.modal {
+  background-color: $white;
+  border: 0.1em solid getColor(light, light);
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  display: none;
+  flex-direction: column;
+  width: 700px;
+  // width: 100%;
+
+  &--open {
+    display: flex;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+  }
+
+  &__content {
+    display: flex;
+    padding: 0.5em 1em;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    padding: 1em 1em;
+  }
+
+  &__buttons {
+    button {
+      margin-right: 1em;
+    }
+  }
+
+  &__close {
+    border: none;
+    font-size: $xLarge;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: getColor(primary);
+      cursor: pointer;
+    }
+  }
+}

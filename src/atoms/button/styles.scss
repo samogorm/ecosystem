@@ -58,11 +58,11 @@
   }
 
   &--light {
-    background: getColor(light, base);
+    background: getColor(light, light);
     color: getColor(dark, base);
 
     &:hover {
-      background: getColor(light, light);
+      background: getColor(light, base);
     }
   }
 
@@ -110,7 +110,7 @@
     }
 
     &--light {
-      border: 0.1em solid getColor(light);
+      border: 0.1em solid getColor(light, light);
       color: getColor(dark, base);
 
       &:hover {
