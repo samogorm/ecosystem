@@ -29,9 +29,9 @@ const Modal = ({ id, title, content, actionButton, actions, toggled }) => {
             action={() => setIsOpen(false)}
           />
         </div>
-        { actions.length > 0 && (
+        { actions && (
           <div className="modal__actions">
-
+            { actions }
           </div>
         )}
       </div>

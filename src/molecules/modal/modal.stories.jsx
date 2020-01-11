@@ -29,6 +29,12 @@ const checkboxData = {
   options: [],
 };
 
+const actions = (
+  <div className="actions">
+    <p>Action One</p>
+  </div>
+);
+
 const html = (
   <div style={{width: '100%'}}>
     <FormGroup
@@ -68,6 +74,7 @@ storiesOf('Molecules/Modal', module)
             content={ html }
             actionButton={ actionButton }
             toggled={true}
+            actions={ actions }
           />
         </div>
       </div>
