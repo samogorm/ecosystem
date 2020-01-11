@@ -9,6 +9,7 @@ import './styles.scss';
 const Input = ({ 
   initialValue,
   name,
+  type,
   placeholder,
   validationRules
 }) => {
@@ -31,7 +32,7 @@ const Input = ({
   return (
     <div>
       <input
-        type="text"
+        type={ type }
         value={ value }
         name={ name }
         onChange={ (event) => setValue(event.target.value) }
@@ -53,6 +54,7 @@ const Input = ({
 }
 
 Input.defaultProps = {
+  type: 'text',
   validationRules: {}
 };
 
