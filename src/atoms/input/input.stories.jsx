@@ -15,6 +15,7 @@ storiesOf('Atoms/Input', module)
             initialValue=""
             name="email"
             placeholder="Email address..."
+            validationRules={{ type: 'email', length: 50, required: true }}
           />
         </div>
       </div>
