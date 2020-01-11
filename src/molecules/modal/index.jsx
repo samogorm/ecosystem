@@ -10,30 +10,32 @@ const Modal = ({ id, title, content, actionButton, actions, toggled }) => {
   const [isOpen, setIsOpen] = useState(toggled);
 
   return (
-    <div id={`modal-${id}`} className={isOpen ? 'modal modal--open' : 'modal'}>
-      <div className="modal__title">
-        <h3>{ title }</h3>
-        <button className="modal__close" onClick={() => setIsOpen(false)}>
-          <Times />
-        </button>
-      </div>
-      <div className="modal__content">
-        { content }
-      </div>
-      <div className="modal__footer">
-        <div className="modal__buttons">
-          {actionButton && (actionButton)}
-          <Button
-            label="Cancel"
-            colour="light"
-            action={() => setIsOpen(false)}
-          />
+    <div className="modal__wrapper">
+      <div id={`modal-${id}`} className={isOpen ? 'modal modal--open' : 'modal'}>
+        <div className="modal__title">
+          <h3>{title}</h3>
+          <button className="modal__close" onClick={() => setIsOpen(false)}>
+            <Times />
+          </button>
         </div>
-        { actions && (
-          <div className="modal__actions">
-            { actions }
+        <div className="modal__content">
+          {content}
+        </div>
+        <div className="modal__footer">
+          <div className="modal__buttons">
+            {actionButton && (actionButton)}
+            <Button
+              label="Cancel"
+              colour="light"
+              action={() => setIsOpen(false)}
+            />
           </div>
-        )}
+          {actions && (
+            <div className="modal__actions">
+              {actions}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

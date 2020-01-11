@@ -7,8 +7,11 @@
   box-shadow: $boxShadow;
   display: none;
   flex-direction: column;
-  width: 700px;
-  // width: 100%;
+  width: 100%;
+  
+  @media (min-width: 1280px) {
+    width: 700px;
+  }
 
   &--open {
     display: flex;
