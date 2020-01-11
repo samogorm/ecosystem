@@ -11,6 +11,7 @@ const Modal = ({ id, title, content, actionButton, actions, toggled }) => {
 
   return (
     <div className="modal__wrapper">
+      <div class={isOpen ? 'modal__overlay modal__overlay--open' : 'modal__overlay'}></div>
       <div id={`modal-${id}`} className={isOpen ? 'modal modal--open' : 'modal'}>
         <div className="modal__title">
           <h3>{title}</h3>

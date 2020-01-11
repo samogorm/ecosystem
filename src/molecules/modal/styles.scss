@@ -7,10 +7,30 @@
   box-shadow: $boxShadow;
   display: none;
   flex-direction: column;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
+  z-index: 99;
   
   @media (min-width: 1280px) {
     width: 700px;
+  }
+
+  &__overlay {
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 98;
+
+    &--open {
+      display: block;
+    }
   }
 
   &--open {
