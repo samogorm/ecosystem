@@ -1,4 +1,4 @@
-export const ValidationRule = (type, length, required) => {
+export const ValidationRule = ( { type, length, required }) => {
   return {
     type,
     length,
