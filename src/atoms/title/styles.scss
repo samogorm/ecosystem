@@ -1,0 +1,60 @@
+@import './../../global/styles/imports.scss';
+
+.h1 {
+  font-size: $xxLarge;
+}
+
+.h2 {
+  font-size: $xLarge;
+}
+
+.h3 {
+  font-size: $large;
+}
+
+.h4 {
+  font-size: $medium;
+}
+
+.h5 {
+  font-size: $small;
+}
+
+.h6 {
+  font-size: $xSmall;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  &--primary {
+    color: getColor(primary);
+  }
+
+  &--secondary {
+    color: getColor(secondary);
+  }
+
+  &--danger {
+    color: getColor(danger);
+  }
+
+  &--dark {
+    color: getColor(dark);
+  }
+
+  &--light {
+    color: getColor(light);
+  }
+
+  &--black {
+    color: getColor(black);
+  }
+
+  &--grey {
+    color: getColor(grey);
+  }
+}
