@@ -12,7 +12,8 @@ import './styles.scss';
 const FormGroup = ({
   type,
   label,
-  data
+  data,
+  validationRules
 }) => {
 
   const renderFormElement = () => {
@@ -24,6 +25,7 @@ const FormGroup = ({
             selectedValue={ options.find(option => option.selected === true) }
             name="email"
             options={ options }
+            validationRules={ validationRules }
           />
         );
       case 'checkbox':
@@ -31,6 +33,7 @@ const FormGroup = ({
           <Checkbox
             label={ label }
             name={ name }
+            validationRules={ validationRules }
           />
         );
       case 'radio':
@@ -40,6 +43,7 @@ const FormGroup = ({
             name={ name }
             options={ options }
             defaultChecked={ options.find(option => option.checked === true) }
+            validationRules={ validationRules }
           />
         );
       case 'textarea':
@@ -47,6 +51,7 @@ const FormGroup = ({
           <Textarea
             id={ name }
             name={ name }
+            validationRules={ validationRules }
           />
         );
       default:
@@ -55,6 +60,7 @@ const FormGroup = ({
             initialValue={ initialValue }
             name={ name }
             placeholder={`${label}...`}
+            validationRules={ validationRules }
           />
         );
     }
@@ -68,6 +74,10 @@ const FormGroup = ({
   );
 };
 
+FormGroup.defaultProps = {
+  validationRules: {}
+};
+
 FormGroup.propTypes = {
   type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
@@ -75,7 +85,8 @@ FormGroup.propTypes = {
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     options: PropTypes.array,
-  })
+  }),
+  validationRules: PropTypes.object
 };
 
 export default FormGroup;
