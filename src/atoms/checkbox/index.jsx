@@ -6,12 +6,13 @@ import './styles.scss';
 const Checkbox = ({
   label,
   name,
-  type
+  type,
+  action
 }) => {
 
   const [checked, setChecked] = useState(false);
 
-  useEffect(() => console.log('updated'), [checked]);
+  useEffect(() => action(checked), [checked]);
 
   return(
     <div className={`checkbox__wrapper checkbox__wrapper--${type}`} >

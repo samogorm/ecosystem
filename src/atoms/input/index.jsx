@@ -61,8 +61,7 @@ const Input = ({
 
 Input.defaultProps = {
   type: 'text',
-  validationRules: {},
-  callback: function(){}
+  validationRules: {}
 };
 
 Input.propTypes = {

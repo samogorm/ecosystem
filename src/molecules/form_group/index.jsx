@@ -34,6 +34,7 @@ const FormGroup = ({
           <Checkbox
             label={ label }
             name={ name }
+            action={value => action(value)}
           />
         );
       case 'radio':
@@ -97,7 +98,8 @@ FormGroup.propTypes = {
     name: PropTypes.string.isRequired,
     options: PropTypes.array,
   }),
-  validationRules: PropTypes.object
+  validationRules: PropTypes.object,
+  action: PropTypes.func.isRequired
 };
 
 export default FormGroup;

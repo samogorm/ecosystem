@@ -61,7 +61,7 @@ const LoginForm = ({ formData }) => {
         type="checkbox"
         label=""
         data={ rememberUserField }
-        action={() => setRememberUser(false)}
+        action={value => setRememberUser(value)}
       />
 
       <Button
