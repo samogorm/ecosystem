@@ -15,6 +15,7 @@ storiesOf('Atoms/Textarea', module)
             id="description"
             name="description"
             error={false}
+            action={value => console.log(value)}
           />
         </div>
       </div>
