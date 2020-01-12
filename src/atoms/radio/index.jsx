@@ -59,7 +59,7 @@ Radio.propTypes =  {
   name: PropTypes.string.isRequired,
   options: PropTypes.any,
   defaultChecked: PropTypes.bool.isRequired,
-  action: PropTypes.bool.isRequired
+  action: PropTypes.func.isRequired
 };
 
 export default Radio;

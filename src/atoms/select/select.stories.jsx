@@ -38,6 +38,7 @@ storiesOf('Atoms/Select', module)
             selectedValue={options.find(option => option.selected === true)}
             name="email"
             options={ options }
+            action={value => console.log(value)}
           />
         </div>
         <div className="story-group">
@@ -47,6 +48,7 @@ storiesOf('Atoms/Select', module)
             name="email"
             options={ options }
             hasError={ true }
+            action={value => console.log(value)}
           />
         </div>
       </div>

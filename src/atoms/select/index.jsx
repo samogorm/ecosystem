@@ -8,7 +8,8 @@ const Select = ({
   selectedValue,
   name,
   options,
-  hasError
+  hasError,
+  action
 }) => {
   let [selected, setSelected] = useState(selectedValue);
 
@@ -17,7 +18,10 @@ const Select = ({
     if(prev !== undefined) prev.selected = false;
   }
 
-  useEffect(() => removePrevState(), [selected]);
+  useEffect(() => {
+    removePrevState();
+    action(selected);
+  }, [selected]);
 
   return (
     <div className="select__wrapper">
@@ -58,6 +62,7 @@ Select.propTypes = {
   name: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
   hasError: PropTypes.bool,
+  action: PropTypes.func.isRequired
 };
 
 export default Select;
