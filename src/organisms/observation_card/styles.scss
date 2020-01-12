@@ -1,0 +1,52 @@
+@import './../../global/styles/imports.scss';
+
+.observation-card {
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  width: 100%;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: $boxShadowHover;
+    transform: translateY(-0.1em);
+  }
+
+  &__image {
+    margin: 0;
+  }
+
+  &__image-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7em 1em;
+  }
+
+  &__date,
+  &__location {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      margin-right: 0.5em;
+      color: getColor(white);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  &__duration {
+    // align-items: center;
+    display: flex;
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+}

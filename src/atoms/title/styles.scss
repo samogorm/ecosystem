@@ -57,4 +57,28 @@
   &--grey {
     color: getColor(grey);
   }
+
+  &--white {
+    color: getColor(white);
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+
+  &--xs-margin {
+    margin: 0.2em 0;
+  }
+
+  &--sm-margin {
+    margin: 0.5em 0;
+  }
+
+  &--md-margin {
+    margin: 1em 0;
+  }
+
+  &--lg-margin {
+    margin: 1.5em 0;
+  }
 }
