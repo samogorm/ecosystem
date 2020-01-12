@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import FormGroup from './../../molecules/form_group/index';
@@ -21,6 +21,32 @@ const RegisterForm = ({ formData }) => {
     confirm_password: confirmPasswordField
   } = formFields;
 
+  const [firstname, setFirstname] = useState(null);
+  const [lastname, setLastname] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [username, setUsername] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [confirmPassword, setConfirmPassword] = useState(null);
+  const [disableForm, setDisableForm] = useState(true);
+
+  const submitForm = () => {
+    const data = {
+      firstname,
+      lastname,
+      email,
+      username,
+      password
+    }
+
+    return formData(data);
+  };
+
+  const isFormReady = () => {
+    return (firstname !== null) && (lastname !== null) && (username !== null) && (email !== null) && (password !== null) && (confirmPassword === password);
+  };
+
+  useEffect(() => setDisableForm(!isFormReady()), [firstname, lastname, username, email, password, confirmPassword]);
+
   return (
     <div className="register-form">
       <div className="login-form__title">
@@ -34,7 +60,7 @@ const RegisterForm = ({ formData }) => {
         label={firstnameField.label}
         data={firstnameField}
         validationRules={ValidationRule(validationRules.firstname)}
-        action={value => console.log(value)}
+        action={value => setFirstname(value)}
       />
 
       <FormGroup
@@ -42,7 +68,15 @@ const RegisterForm = ({ formData }) => {
         label={lastnameField.label}
         data={lastnameField}
         validationRules={ValidationRule(validationRules.lastname)}
-        action={value => console.log(value)}
+        action={value => setLastname(value)}
+      />
+
+      <FormGroup
+        type="input"
+        label={emailField.label}
+        data={emailField}
+        validationRules={ValidationRule(validationRules.email)}
+        action={value => setEmail(value)}
       />
 
       <FormGroup
@@ -50,7 +84,7 @@ const RegisterForm = ({ formData }) => {
         label={usernameField.label}
         data={usernameField}
         validationRules={ValidationRule(validationRules.username)}
-        action={value => console.log(value)}
+        action={value => setUsername(value)}
       />
 
       <FormGroup
@@ -58,7 +92,7 @@ const RegisterForm = ({ formData }) => {
         label={passwordField.label}
         data={passwordField}
         validationRules={ValidationRule(validationRules.password)}
-        action={value => console.log(value)}
+        action={value => setPassword(value)}
       />
 
       <FormGroup
@@ -66,17 +100,21 @@ const RegisterForm = ({ formData }) => {
         label={confirmPasswordField.label}
         data={confirmPasswordField}
         validationRules={ValidationRule(validationRules.password)}
-        action={value => console.log(value)}
+        action={value => setConfirmPassword(value)}
       />
 
       <Button
         label="Login"
         colour="primary"
-        action={() => console.log()}
-        disabled={false}
+        action={() => isFormReady() && submitForm()}
+        disabled={ disableForm }
       />
     </div>
   );
+};
+
+RegisterForm.propTypes = {
+  formData: PropTypes.func.isRequired
 };
 
 export default RegisterForm;
