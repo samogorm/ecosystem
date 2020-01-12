@@ -27,6 +27,7 @@ const FormGroup = ({
             name="email"
             options={ options }
             validationRules={ validationRules }
+            action={value => action(value)}
           />
         );
       case 'checkbox':
@@ -44,6 +45,7 @@ const FormGroup = ({
             name={ name }
             options={ options }
             defaultChecked={ options.find(option => option.checked === true) }
+            action={value => action(value)}
           />
         );
       case 'textarea':

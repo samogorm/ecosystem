@@ -7,7 +7,8 @@ const Radio = ({
   id,
   name,
   options,
-  defaultChecked
+  defaultChecked,
+  action
 }) => {
   const [checkedValue, setCheckedValue] = useState(defaultChecked);
 
@@ -23,7 +24,10 @@ const Radio = ({
     if (prev !== undefined) prev.checked = false;
   }
 
-  useEffect(() => removePrevState(), [checkedValue]);
+  useEffect(() => {
+    removePrevState();
+    action(checkedValue)
+  }, [checkedValue]);
 
   return (
     <div className="radio__block">
@@ -55,6 +59,7 @@ Radio.propTypes =  {
   name: PropTypes.string.isRequired,
   options: PropTypes.any,
   defaultChecked: PropTypes.bool.isRequired,
+  action: PropTypes.bool.isRequired
 };
 
 export default Radio;

@@ -39,6 +39,7 @@ storiesOf('Atoms/Radio', module)
             name="fave_elton_john_song"
             options={ options }
             defaultChecked={ options.find(option => option.checked === true) }
+            action={value => console.log(value)}
           />
         </div>
       </div>
