@@ -1,0 +1,19 @@
+@import './../../global/styles/imports.scss';
+
+.tooltip {
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  padding: 0.3em;
+
+  &--bg-primary {
+    background: getColor(primary);
+  }
+
+  &--bg-secondary {
+    background: getColor(secondary);
+  }
+
+  &--bg-dark {
+    background: getColor(dark);
+  }
+}

@@ -35,4 +35,20 @@
   &--xxlg {
     font-size: $xxLarge;
   }
+
+  &--dark {
+    color: getColor(black);
+  }
+
+  &--grey {
+    color: getColor(metal, dark);
+  }
+
+  &--white {
+    color: getColor(white);
+  }
+
+  &--metal {
+    color: getColor(metal, dark);
+  }
 }

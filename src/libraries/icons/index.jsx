@@ -10,7 +10,10 @@ import {
   faTimes,
   faMapMarkerAlt,
   faCalendarAlt,
-  faClock
+  faClock,
+  faEllipsisH,
+  faPaw,
+  faInfo
 } from '@fortawesome/pro-regular-svg-icons';
 
 library.add(faChevronDown)
@@ -24,3 +27,6 @@ export const Times = () => (<FontAwesomeIcon icon={faTimes} />);
 export const MapMarker = () => (<FontAwesomeIcon icon={faMapMarkerAlt} />);
 export const Calendar = () => (<FontAwesomeIcon icon={faCalendarAlt} />);
 export const Clock = () => (<FontAwesomeIcon icon={faClock} />);
+export const Ellipsis = () => (<FontAwesomeIcon icon={faEllipsisH} />);
+export const Paw = () => (<FontAwesomeIcon icon={faPaw} />);
+export const Info = () => (<FontAwesomeIcon icon={faInfo} />);

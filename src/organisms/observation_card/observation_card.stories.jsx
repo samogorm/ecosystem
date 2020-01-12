@@ -20,7 +20,7 @@ storiesOf('Organisms/ObservationCard', module)
               age: 16
             }}
             date="12th Jan 2020"
-            duration="1hr 20mins"
+            duration="1hr 20m"
             location="Darwen, UK"
             image="https://i.ytimg.com/vi/RfXxh0Eff_w/maxresdefault.jpg"
           />
@@ -36,7 +36,7 @@ storiesOf('Organisms/ObservationCard', module)
               age: 16
             }}
             date="12th Jan 2020"
-            duration="1hr 20mins"
+            duration="1hr 20m"
             location="Bolton, UK"
             image="https://i.ytimg.com/vi/CUswUl3cog0/maxresdefault.jpg"
           />

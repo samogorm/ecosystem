@@ -2,11 +2,12 @@ import React from 'react';
 
 import Title from './../../atoms/title/index';
 import Text from './../../atoms/text/index';
-import { MapMarker, Calendar, Clock } from './../../libraries/icons/index';
+import Tooltip from './../../atoms/tooltip/index';
+import { MapMarker, Calendar, Clock, Ellipsis, Info, Paw } from './../../libraries/icons/index';
 
 import './styles.scss';
 
-const ObservationCard = ({ title, organism, date, duration, location, image }) => {
+const ObservationCard = ({ title, excerpt, organism, date, duration, location, image }) => {
 
   const ImageStyle = {
     backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.73)), url(${image})`,
@@ -38,6 +39,25 @@ const ObservationCard = ({ title, organism, date, duration, location, image }) =
             />
           </span>
         </div>
+
+        <div class="observation-card__tooltips">
+          <span className="observation-card__duration observation-card__tooltip">
+            <Clock />
+            <Tooltip
+              content={duration}
+              backgroundColour="bg-primary"
+              fontColour="white"
+            />
+          </span>
+          <span className="observation-card__organism observation-card__tooltip">
+            <Paw />
+            <Tooltip
+              content={organism.title}
+              backgroundColour="bg-primary"
+              fontColour="white"
+            />
+          </span>
+        </div>
       </figure>
       <div className="observation-card__footer">
         <span className="observation-card__title">
@@ -48,19 +68,16 @@ const ObservationCard = ({ title, organism, date, duration, location, image }) =
             margin="xs-margin"
           />
           <Text
-            content={ `${organism.title}, ${organism.name}` }
+            content={ `${excerpt}...` }
             size="sm"
+            colour="metal"
           />
         </span>
-        <span className="observation-card__duration">
-          <Clock />
-          <Title
-            tag="h5"
-            colour="dark"
-            children={ duration }
-            margin="no-margin"
-          />
-        </span>
+        <div class="observation-card__actions">
+          <button className="observation-card__menu-toggle" onClick={() => console.log('clciked')}>
+            <Ellipsis />
+          </button>
+        </div>
       </div>
     </a>
   )

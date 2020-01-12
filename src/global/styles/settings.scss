@@ -28,6 +28,7 @@ $light: #ccd9df;
 $white: #ffffff;
 $black: #111116;
 $grey: #d8d8dd;
+$metal: #7c828d;
 
 // Input
 $inputPadding: 0.8em 0.5em;
@@ -88,5 +89,11 @@ $colors: (
     light: lighten($grey, $colorShade),
     dark: darken($grey, $colorShade),
     trans: transparentize($grey, $colorTrans)
+  ),
+  metal: (
+    base: $metal,
+    light: lighten($metal, $colorShade),
+    dark: darken($metal, $colorShade),
+    trans: transparentize($metal, $colorTrans)
   )
 );
