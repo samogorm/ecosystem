@@ -118,4 +118,9 @@
       }
     }
   }
+
+  &:disabled,
+  &[disabled] {
+    background: aqua;
+  }
 }

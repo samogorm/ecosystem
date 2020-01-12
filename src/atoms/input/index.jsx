@@ -11,7 +11,8 @@ const Input = ({
   name,
   type,
   placeholder,
-  validationRules
+  validationRules,
+  action
 }) => {
   let [value, setValue] = useState(initialValue);
   let [isValid, setIsValid] = useState(true);
@@ -29,14 +30,19 @@ const Input = ({
     }
   }
 
+  useEffect(() => {
+    if (isValid) action(value);
+    else action(null);
+  }, [value, isValid]);
+
   return (
     <div>
       <input
         type={ type }
         value={ value }
         name={ name }
-        onChange={ (event) => setValue(event.target.value) }
-        onBlur={() => validateField() }
+        onBlur={() => validateField()}
+        onChange={(event) => setValue(event.target.value) }
         placeholder={ placeholder }
         className={ isValid ? 'input' : 'input input--error' }
       />
@@ -44,7 +50,7 @@ const Input = ({
       {!isValid && 
         validationItems.filter(item => !item.valid).map(item => (
           <ErrorMessage
-            key={`error-message-${item.type}`}
+            key={`error-message-${item.rule}`}
             message={item.message}
           />
         ))
@@ -55,14 +61,16 @@ const Input = ({
 
 Input.defaultProps = {
   type: 'text',
-  validationRules: {}
+  validationRules: {},
+  callback: function(){}
 };
 
 Input.propTypes = {
   initialValue: PropTypes.any.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  validationRules: PropTypes.object
+  validationRules: PropTypes.object,
+  action: PropTypes.func.isRequired
 };
 
 export default Input;

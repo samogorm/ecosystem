@@ -13,7 +13,8 @@ const FormGroup = ({
   type,
   label,
   data,
-  validationRules
+  validationRules,
+  action
 }) => {
 
   const renderFormElement = () => {
@@ -52,6 +53,17 @@ const FormGroup = ({
             validationRules={ validationRules }
           />
         );
+      case 'password':
+        return (
+          <Input
+            initialValue={ initialValue }
+            name={ name }
+            type="password"
+            placeholder={`${label}...`}
+            validationRules={ validationRules }
+            action={value => action(value)}
+          />
+        );
       default:
         return (
           <Input
@@ -59,6 +71,7 @@ const FormGroup = ({
             name={ name }
             placeholder={`${label}...`}
             validationRules={ validationRules }
+            action={value => action(value)}
           />
         );
     }
