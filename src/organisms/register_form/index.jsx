@@ -52,7 +52,7 @@ const RegisterForm = ({ formData }) => {
       <div className="login-form__title">
         <Title
           tag="h3"
-          children="Login to your account"
+          children="Create an account"
         />
       </div>
       <FormGroup
@@ -104,7 +104,7 @@ const RegisterForm = ({ formData }) => {
       />
 
       <Button
-        label="Login"
+        label="Create account"
         colour="primary"
         action={() => isFormReady() && submitForm()}
         disabled={ disableForm }
