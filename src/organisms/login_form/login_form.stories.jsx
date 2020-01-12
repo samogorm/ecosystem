@@ -11,7 +11,9 @@ storiesOf('Organisms/LoginForm', module)
       <div className="stories-layout">
         <div className="story-group">
           <label>Login Form</label>
-          <LoginForm />
+          <LoginForm
+            formData={data => console.log(data)}
+          />
         </div>
       </div>
     </Fragment>

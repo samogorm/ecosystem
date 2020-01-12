@@ -6,28 +6,32 @@ import Button from './../../atoms/button/index';
 import Title from './../../atoms/title/index';
 
 import { ValidationRule } from './../../helpers/ValidationRule';
-import { formData } from './form_data';
+import { formFields } from './form_fields';
 import { validationRules } from './validation_rules';
 
 import './styles.scss';
 
-const LoginForm = ({ apiEndpoint, action }) => {
+const LoginForm = ({ formData }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [rememberUser, setRememberUser] = useState(false);
   const [disableForm, setDisableForm] = useState(true);
-  const [submitted, setSubmitted] = useState(false);
 
-  const { email: emailData, password: passwordData, remember_user: rememberUserData } = formData;
+  const { email: emailField, password: passwordField, remember_user: rememberUserField } = formFields;
 
   const isFormEmpty = () => (email === null || email === "") && (password === null || password === "");
 
   const submitForm = () => {
-    // TODO: go and send off to api.
-    console.log('submitting form')
+    const data = {
+      email,
+      password,
+      rememberUser
+    }
+
+    return formData(data);
   };
 
-  useEffect(() => setDisableForm(isFormEmpty()), [email, password])
+  useEffect(() => setDisableForm(isFormEmpty()), [email, password]);
 
   return (
     <div className="login-form">
@@ -39,16 +43,16 @@ const LoginForm = ({ apiEndpoint, action }) => {
       </div>
       <FormGroup
         type="input"
-        label={ emailData.label }
-        data={ emailData }
+        label={ emailField.label }
+        data={ emailField }
         validationRules={ ValidationRule(validationRules.email) }
         action={value => setEmail(value)}
       />
 
       <FormGroup
         type="password"
-        label={ passwordData.label }
-        data={ passwordData }
+        label={ passwordField.label }
+        data={ passwordField }
         validationRules={ ValidationRule(validationRules.password) }
         action={value => setPassword(value)}
       />
@@ -56,8 +60,8 @@ const LoginForm = ({ apiEndpoint, action }) => {
       <FormGroup
         type="checkbox"
         label=""
-        data={ rememberUserData }
-        action={() => console.log('hello')}
+        data={ rememberUserField }
+        action={() => setRememberUser(false)}
       />
 
       <Button
@@ -71,7 +75,7 @@ const LoginForm = ({ apiEndpoint, action }) => {
 };
 
 LoginForm.propTypes = {
-
+  formData: PropTypes.func.isRequired
 };
 
 export default LoginForm;

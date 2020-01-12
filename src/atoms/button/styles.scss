@@ -121,6 +121,10 @@
 
   &:disabled,
   &[disabled] {
-    background: aqua;
+    background: getColor(grey);
+
+    &:hover {
+      cursor: not-allowed;
+    }
   }
 }

@@ -1,4 +1,4 @@
-export const formData = {
+export const formFields = {
   email: {
     label: 'Email Address',
     name: 'email',
