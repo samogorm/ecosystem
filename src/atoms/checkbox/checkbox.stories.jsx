@@ -14,14 +14,7 @@ storiesOf('Atoms/Checkbox', module)
           <Checkbox
             label="I would like to receive news and offers."
             name="test"
-          />
-        </div>
-        <div className="story-group">
-          <label>Button</label>
-          <Checkbox
-            label="Yes"
-            name="my_button"
-            type="button"
+            action={value => console.log(value)}
           />
         </div>
       </div>

@@ -87,6 +87,7 @@ storiesOf('Molecules/FormGroup', module)
             type="input"
             label="Email Address"
             data={ inputData }
+            action={value => console.log(value)}
           />
         </div>
         <div className="story-group">
@@ -95,6 +96,7 @@ storiesOf('Molecules/FormGroup', module)
             type="textarea"
             label="Leave a message"
             data={textareaData}
+            action={value => console.log(value)}
           />
         </div>
         <div className="story-group">
@@ -103,6 +105,7 @@ storiesOf('Molecules/FormGroup', module)
             type="select"
             label="Favourite Animal"
             data={ selectData }
+            action={value => console.log(value)}
           />
         </div>
         <div className="story-group">
@@ -111,6 +114,7 @@ storiesOf('Molecules/FormGroup', module)
             type="checkbox"
             label="Other things we need"
             data={ checkboxData }
+            action={value => console.log(value)}
           />
         </div>
         <div className="story-group">
@@ -119,6 +123,7 @@ storiesOf('Molecules/FormGroup', module)
             type="radio"
             label="What's your favourite Elton John song?"
             data={ radioData }
+            action={value => console.log(value)}
           />
         </div>
       </div>

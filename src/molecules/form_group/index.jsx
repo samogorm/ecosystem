@@ -52,6 +52,7 @@ const FormGroup = ({
             id={ name }
             name={ name }
             validationRules={ validationRules }
+            action={value => action(value)}
           />
         );
       case 'password':

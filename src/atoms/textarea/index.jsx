@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import ErrorMessage from './../error_message/index';
@@ -6,7 +6,7 @@ import { ValidateInput } from './../../helpers/ValidateInput';
 
 import './styles.scss';
 
-const Textarea = ({ id, name, error, validationRules }) => {
+const Textarea = ({ id, name, error, validationRules, action }) => {
   let [value, setValue] = useState(null);
   let [isValid, setIsValid] = useState(true);
   let [validationItems, setValidationItems] = useState([]);
@@ -23,6 +23,8 @@ const Textarea = ({ id, name, error, validationRules }) => {
     }
   }
 
+  useEffect(() => action(value), [value]);
+
   return(
     <div>
       <textarea
@@ -35,7 +37,7 @@ const Textarea = ({ id, name, error, validationRules }) => {
       {!isValid &&
         validationItems.filter(item => !item.valid).map(item => (
           <ErrorMessage
-            key={`error-message-${item.type}`}
+            key={`error-message-${item.rule}`}
             message={item.message}
           />
         ))
@@ -52,7 +54,8 @@ Textarea.defaultProps = {
 Textarea.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  action: PropTypes.func.isRequired
 };
 
 export default Textarea;
