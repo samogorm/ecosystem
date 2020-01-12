@@ -41,16 +41,19 @@ const html = (
       type="input"
       label="Name"
       data={inputData[0]}
+      action={value => console.log(value)}
     />
     <FormGroup
       type="input"
       label="Email Address"
       data={inputData[1]}
+      action={value => console.log(value)}
     />
     <FormGroup
       type="checkbox"
       label=""
       data={checkboxData}
+      action={value => console.log(value)}
     />
   </div>
 );
