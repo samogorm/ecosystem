@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 99;
   
-  @media (min-width: 1280px) {
+  @include min-width('lg') {
     width: 700px;
   }
 

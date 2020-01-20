@@ -1,0 +1,13 @@
+@import './../breakpoints.scss';
+
+@mixin min-width($breakpoint) {
+  @media (min-width: #{map-get($breakpoints, $breakpoint)}px) { 
+    @content;
+  }
+}
+
+@mixin max-width($breakpoint) {
+  @media (max-width: #{map-get($breakpoints, $breakpoint)}px) { 
+    @content;
+  }
+}

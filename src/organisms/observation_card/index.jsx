@@ -15,7 +15,7 @@ const ObservationCard = ({ title, excerpt, organism, date, duration, location, i
     borderRadius: '0.4rem 0.4rem 0 0',
     height: '14rem'
   };
-  
+
   return(
     <a className="observation-card">
       <figure className="observation-card__image" style={ ImageStyle }>
