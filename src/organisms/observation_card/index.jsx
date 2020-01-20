@@ -7,7 +7,7 @@ import { MapMarker, Calendar, Clock, Ellipsis, Info, Paw } from './../../librari
 
 import './styles.scss';
 
-const ObservationCard = ({ title, excerpt, organism, date, duration, location, image }) => {
+const ObservationCard = ({ id, title, excerpt, organism, date, duration, location, image }) => {
 
   const ImageStyle = {
     backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.73)), url(${image})`,
@@ -74,7 +74,7 @@ const ObservationCard = ({ title, excerpt, organism, date, duration, location, i
           />
         </span>
         <div class="observation-card__actions">
-          <button className="observation-card__menu-toggle" onClick={() => console.log('clciked')}>
+          <button className="observation-card__menu-toggle" onClick={() => console.log('clicked')}>
             <Ellipsis />
           </button>
         </div>

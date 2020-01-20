@@ -12,6 +12,7 @@ storiesOf('Organisms/ObservationCard', module)
         <div className="story-group" style={{width: '400px'}}>
           <label>Observation Card</label>
           <ObservationCard
+            id="1"
             title="A little observation"
             excerpt="Something I have been monitoring for a while"
             organism={{
@@ -28,6 +29,7 @@ storiesOf('Organisms/ObservationCard', module)
         <div className="story-group" style={{ width: '400px' }}>
           <label>Observation Card</label>
           <ObservationCard
+            id="2"
             title="A little observation"
             excerpt="Something I have been monitoring for a while"
             organism={{
