@@ -1,19 +1,35 @@
 @import './../../global/styles/imports.scss';
 
 .h1 {
-  font-size: $xxLarge;
+  font-size: $large;
+
+  @include min-width('md') {
+    font-size: $xxLarge;
+  }
 }
 
 .h2 {
-  font-size: $xLarge;
+  font-size: $large;
+
+  @include min-width('md') {
+    font-size: $xLarge;
+  }
 }
 
 .h3 {
-  font-size: $large;
+  font-size: $medium;
+
+  @include min-width('md') {
+    font-size: $large;
+  }
 }
 
 .h4 {
-  font-size: $medium;
+  font-size: $small;
+
+   @include min-width('md') {
+    font-size: $medium;
+  }
 }
 
 .h5 {
