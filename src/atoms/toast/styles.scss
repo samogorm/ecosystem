@@ -17,19 +17,19 @@
   }
 
   &--primary {
-    background-color: getColor(primary);
+    background-color: getColor(primary, transLight);
   }
 
   &--secondary {
-    background-color: getColor(secondary);
+    background-color: getColor(secondary, transLight);
   }
 
   &--danger {
-    background-color: getColor(danger);
+    background-color: getColor(danger, transLight);
   }
 
   &--dark {
-    background-color: getColor(dark);
+    background-color: getColor(dark, transLight);
   }
 
   &--absolute {

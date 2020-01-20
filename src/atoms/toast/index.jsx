@@ -9,7 +9,7 @@ const Toast = ({ icon, text, position, yAxis, xAxis, colour, delay }) => {
   const [ showToast, setShowToast ] = useState('show');
 
   const hideAfterDelay = () => {
-    setTimeout(() => setShowToast('hide'), delay);
+    // setTimeout(() => setShowToast('hide'), delay);
   };
 
   useEffect(() => hideAfterDelay(), [showToast]);

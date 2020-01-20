@@ -37,6 +37,7 @@ $inputHeight: 2.5em;
 // Other
 $colorShade: 8%;
 $colorTrans: 0.5;
+$colorTransLight: 0.2;
 $borderRadius: 0.4em;
 $boxShadow: rgba(8, 35, 51, 0.1) 0px 2px 14px;
 $boxShadowHover: rgba(8, 35, 51, 0.3) 0px 2px 14px;
@@ -46,31 +47,36 @@ $colors: (
     base: $primary,
     light: lighten($primary, $colorShade),
     dark: darken($primary, $colorShade),
-    trans: transparentize($primary, $colorTrans)
+    trans: transparentize($primary, $colorTrans),
+    transLight: transparentize($primary, $colorTransLight)
   ),
   secondary: (
     base: $secondary,
     light: lighten($secondary, $colorShade),
     dark: darken($secondary, $colorShade),
-    trans: transparentize($secondary, $colorTrans)
+    trans: transparentize($secondary, $colorTrans),
+    transLight: transparentize($secondary, $colorTransLight)
   ),
   danger: (
     base: $danger,
     light: lighten($danger, $colorShade),
     dark: darken($danger, $colorShade),
-    trans: transparentize($danger, $colorTrans)
+    trans: transparentize($danger, $colorTrans),
+    transLight: transparentize($danger, $colorTransLight)
   ),
   dark: (
     base: $dark,
     light: lighten($dark, $colorShade),
     dark: darken($dark, $colorShade),
-    trans: transparentize($dark, $colorTrans)
+    trans: transparentize($dark, $colorTrans),
+    transLight: transparentize($dark, $colorTransLight)
   ),
   light: (
     base: $light,
     light: lighten($light, $colorShade),
     dark: darken($light, $colorShade),
-    trans: transparentize($light, $colorTrans)
+    trans: transparentize($light, $colorTrans),
+    transLight: transparentize($light, $colorTransLight)
   ),
   white: (
     base: $white,
