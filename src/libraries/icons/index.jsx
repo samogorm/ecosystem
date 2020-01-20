@@ -13,7 +13,9 @@ import {
   faClock,
   faEllipsisH,
   faPaw,
-  faInfo
+  faInfo,
+  faCertificate,
+  faCheck
 } from '@fortawesome/pro-regular-svg-icons';
 
 library.add(faChevronDown)
@@ -30,3 +32,5 @@ export const Clock = () => (<FontAwesomeIcon icon={faClock} />);
 export const Ellipsis = () => (<FontAwesomeIcon icon={faEllipsisH} />);
 export const Paw = () => (<FontAwesomeIcon icon={faPaw} />);
 export const Info = () => (<FontAwesomeIcon icon={faInfo} />);
+export const Certificate = () => (<FontAwesomeIcon icon={faCertificate} />);
+export const Check = () => (<FontAwesomeIcon icon={faCheck} />);

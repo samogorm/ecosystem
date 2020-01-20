@@ -1,0 +1,74 @@
+@import './../../global/styles/imports.scss';
+
+.toast {
+  align-items: center;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  color: getColor(white);
+  display: flex;
+  padding: 1em;
+
+  &__icon {
+    margin-right: 1em;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &--primary {
+    background-color: getColor(primary);
+  }
+
+  &--secondary {
+    background-color: getColor(secondary);
+  }
+
+  &--danger {
+    background-color: getColor(danger);
+  }
+
+  &--dark {
+    background-color: getColor(dark);
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--top {
+    top: 2em;
+  }
+
+  &--bottom {
+    bottom: 2em;
+  }
+
+  &--right {
+    right: 2em;
+     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    animation: animate-in 0.5s forwards;
+    -webkit-animation: animate-in 0.5s forwards;
+  }
+
+  &--left {
+    left: 2em;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    animation: animate-in 0.5s forwards;
+    -webkit-animation: animate-in 0.5s forwards;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  @keyframes animate-in {
+    100% { transform: translateX(0%); }
+  }
+
+  @-webkit-keyframes animate-in{
+      100% { -webkit-transform: translateX(0%); }
+  }
+}
