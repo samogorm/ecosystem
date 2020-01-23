@@ -1,11 +1,13 @@
 @import './../../global/styles/imports.scss';
 
 .toast {
+  @include remove-button-style;
   align-items: center;
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
   color: getColor(white);
   display: flex;
+  font-size: $small;
   padding: 1em;
 
   &__icon {

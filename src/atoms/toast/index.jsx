@@ -9,16 +9,19 @@ const Toast = ({ icon, text, position, yAxis, xAxis, colour, delay }) => {
   const [ showToast, setShowToast ] = useState('show');
 
   const hideAfterDelay = () => {
-    // setTimeout(() => setShowToast('hide'), delay);
+    setTimeout(() => setShowToast('hide'), delay);
   };
 
   useEffect(() => hideAfterDelay(), [showToast]);
 
   return (
-    <div className={`toast toast--${position} toast--${yAxis} toast--${xAxis} toast--${colour} toast--${showToast}`}>
+    <button
+      className={`toast toast--${position} toast--${yAxis} toast--${xAxis} toast--${colour} toast--${showToast}`}
+      onClick={ () => setShowToast('hide') }
+    >
       <span className="toast__icon">{icon}</span>
       <p className="toast__text">{text}</p>
-    </div>
+    </button>
   );
 }
 
