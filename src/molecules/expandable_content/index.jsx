@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import { Plus, Minus } from './../../libraries/icons/index';
+import { ChevronDown, ChevronRight } from './../../libraries/icons/index';
 
 import Text from './../../atoms/text/index';
 
@@ -13,13 +13,13 @@ const ExpandableContent = ({ title, content, isToggled }) => {
   return(
     <div className={isOpen ? 'expandable-content expandable-content--open' : 'expandable-content'}>
       <div className="expandable-content__title" onClick={ () => setIsOpen(!isOpen) }>
-        <span className="expandable-content__icon">
-          { isOpen ? <Minus /> : <Plus/> }
-        </span>
         <Text
           content={ title }
           weight="bold"
         />
+        <span className="expandable-content__icon">
+          {isOpen ? <ChevronDown /> : <ChevronRight />}
+        </span>
       </div>
       <div className="expandable-content__content">
         { content }

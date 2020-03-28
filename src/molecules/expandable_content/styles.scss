@@ -17,11 +17,12 @@
   }
 
   &__title {
+    background-color: getColor(grey, light);
+    border-radius: 1.5em;
     align-items: center;
-    border-bottom: 0.1em solid getColor(black, trans);
     display: flex;
-    justify-content: flex-start;
-    padding: 1em;
+    justify-content: space-between;
+    padding: 1.5em 1em;
 
     &:hover {
       cursor: pointer;
