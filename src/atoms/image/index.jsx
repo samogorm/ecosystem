@@ -3,13 +3,7 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const Image = ({ src, label, size, shape }) => {
-  return(
-    <div className="image__wrapper">
-      <img src={src} alt={ label } className={`image image--${ size } image--${ shape }`} />
-    </div> 
-  );
-};
+const Image = ({ src, label, size, shape }) => (<img src={src} alt={ label } className={`image image--${ size } image--${ shape }`} />);
 
 Image.defaultProps = {
   size: 'original',
